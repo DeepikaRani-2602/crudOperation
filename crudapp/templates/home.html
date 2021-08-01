@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" align="center">
+        <table border="2px" class="table table-striped table-hover">
+            <thead  class="thead-dark"> 
+                <th><h6>name</h6></th>
+                <th><h6>branch</h6></th>
+                <th><h6>rollno</h6></th>
+                <th><h6>city</h6></th>
+                <th><h6>mobno</h6></th>
+            </thead>
+            {% for i in student_list %}
+            <tr>
+                <td><h6>{{i.name}}</h6></td>
+                <td><h6>{{i.branch}}</h6></td>
+                <td><h6>{{i.rollno}}</h6></td>
+                <td><h6>{{i.city}}</h6></td>
+                <td><h6>{{i.mobileno}}</h6></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    
+</body>
+</html>

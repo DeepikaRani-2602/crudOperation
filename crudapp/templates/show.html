@@ -1,0 +1,42 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Employee Records</title>  
+    
+</head>  
+<body>  
+<table class="table table-striped table-bordered table-sm">  
+    <thead class="thead-dark">  
+    <tr>  
+      
+        <th>Name</th>  
+        <th>Branch</th>  
+        <th>rollno</th>  
+        <th>City</th>  
+        <th>Mobile</th>  
+        <th>Actions</th>  
+    </tr>  
+    </thead>  
+    <tbody>  
+{% for employee in employees %}  
+    <tr>  
+        <td>{{ employee.name }}</td>  
+        <td>{{ employee.branch }}</td>  
+        <td>{{ employee.rollno }}</td>  
+        <td>{{ employee.city }}</td>  
+        <td>{{ employee.mobileno }}</td>  
+        <td>  
+                                                         
+            <a href="/edit/{{ employee.id }}"><span class="glyphicon glyphicon-pencil" >Edit</span></a>  
+            <a href="/delete/{{ employee.id }}">Delete</a>  
+        </td>  
+    </tr>  
+{% endfor %}  
+    </tbody>  
+</table>  
+<br>  
+<br>  
+<center><a href="/stud" class="btn btn-primary">Add New Record</a></center>  
+</body>  
+</html>  

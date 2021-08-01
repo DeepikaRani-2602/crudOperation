@@ -1,0 +1,61 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Index</title>  
+    
+</head>  
+<body>  
+  
+<form method="POST" class="post-form" action="/stud">  
+        {% csrf_token %}  
+    <div class="container">  
+<br>  
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <h3>Enter Details</h3>  
+    </div>  
+  </div>  
+    
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Name:</label>  
+    <div class="col-sm-4">  
+      {{ form.name }}  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Student branch:</label>  
+    <div class="col-sm-4">  
+      {{ form.branch }}  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Rollno:</label>  
+    <div class="col-sm-4">  
+      {{ form.rollno }}  
+    </div>  
+  </div>  
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">City:</label>  
+    <div class="col-sm-4">  
+      {{ form.city }}  
+    </div>  
+  </div>  
+
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Mobile No:</label>  
+    <div class="col-sm-4">  
+      {{ form.mobileno }}  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <button type="submit" class="btn btn-primary">Submit</button>  
+    </div>  
+  </div>  
+    </div>  
+</form>  
+</body>  
+</html>  
